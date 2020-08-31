@@ -2,12 +2,12 @@ import React from "react"
 
 import { Label, Checkbox } from "@marigold/components"
 
-interface Props {
-  todo: Todo
-  toggleTodo: ToggleTodo
-}
+// interface Props {
+//   todo: Todo
+//   toggleTodo: ToggleTodo
+// }
 
-export const TodoListItem: React.FC<Props> = ({ todo, toggleTodo }) => {
+export const TodoListItem = ({ todo, toggleTodo }) => {
   return (
     <Label htmlFor={todo.text} css={{ display: "block" }} key={todo.text}>
       <Checkbox

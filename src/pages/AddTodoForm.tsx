@@ -3,11 +3,11 @@ import React, { useState } from "react"
 import { Button, TextInput } from "@marigold/components"
 import { Add } from "@marigold/icons"
 
-interface Props {
-  addTodo: AddTodo
-}
+// export interface Props {
+//   addTodo: AddTodo
+// }
 
-export const AddTodoForm: React.FC<Props> = ({ addTodo }) => {
+export const AddTodoForm = ({ addTodo }) => {
   const [text, setText] = useState("")
 
   return (
