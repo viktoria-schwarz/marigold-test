@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Label, Checkbox } from "@marigold/components"
+import { useStyles } from "@marigold/system"
 
 // interface Props {
 //   todo: Todo
@@ -9,7 +10,7 @@ import { Label, Checkbox } from "@marigold/components"
 
 export const TodoListItem = ({ todo, toggleTodo }) => {
   return (
-    <Label htmlFor={todo.text} css={{ display: "block" }} key={todo.text}>
+    <Label htmlFor={todo.text} classNames={useStyles({ display: "block" })} key={todo.text}>
       <Checkbox
         id={todo.text}
         checked={todo.complete}
@@ -18,6 +19,7 @@ export const TodoListItem = ({ todo, toggleTodo }) => {
         }}
       />
       {todo.text}
+      <br />
     </Label>
   )
 }

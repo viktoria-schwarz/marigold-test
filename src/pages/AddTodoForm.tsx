@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 
-import { Button, TextInput } from "@marigold/components"
+import { Button, Input } from "@marigold/components"
 import { Add } from "@marigold/icons"
+import { useStyles } from "@marigold/system"
 
 // export interface Props {
 //   addTodo: AddTodo
@@ -12,17 +13,20 @@ export const AddTodoForm = ({ addTodo }) => {
 
   return (
     <form>
-      <TextInput
+      <Input
         placeholder="Enter new item..."
-        my={3}
+        htmlFor="id"
         value={text}
         onChange={e => {
           setText(e.target.value)
         }}
+        className={useStyles({ marginTop: '16px' })}
       />
       <Button
         variant="ghost.small"
-        my={3}
+        className={useStyles({
+          marginTop: '16px',
+        })}
         type="submit"
         onClick={e => {
           e.preventDefault()

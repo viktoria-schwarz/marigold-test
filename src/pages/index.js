@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { MarigoldProvider } from "@marigold/system"
+import { ThemeProvider } from "@marigold/system"
 import theme from "@marigold/theme-b2b"
 import { AddTodoForm } from "./AddTodoForm"
 import { TodoList } from "./TodoList"
@@ -50,9 +50,9 @@ const IndexPage = () => {
   }
 
   return (
-    <MarigoldProvider theme={theme}>
-      <div style={{ margin: "64px", maxWidth: "25%" }}>
-        <Heading>Shopping List</Heading>
+    <ThemeProvider theme={theme}>
+      <div style={{ margin: '64px 128px', padding: '8px', maxWidth: "25%" }}>
+        <Heading variant="h3">Shopping List</Heading>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
         <AddTodoForm addTodo={addTodo} />
         {displayAlert ? (
@@ -63,7 +63,7 @@ const IndexPage = () => {
           ""
         )}
       </div>
-    </MarigoldProvider>
+    </ThemeProvider>
   )
 }
 
